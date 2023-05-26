@@ -1,0 +1,2491 @@
+import AdminDashboardBreadCrumb from "components/header/AdminDashboardBreadCrumb";
+import React from "react";
+
+function AdminBusinessSettingsLanguage() {
+  return (
+    <main
+      id="content"
+      role="main"
+      className="main pointer-event"
+      style={{ backgroundColor: "#ffffff" }}
+    >
+      <div className="content container-fluid">
+        <nav aria-label="breadcrumb">
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
+              <AdminDashboardBreadCrumb />
+            </li>
+            <li className="breadcrumb-item" aria-current="page">
+              Language setting
+            </li>
+          </ol>
+        </nav>
+        <div className="row" style={{ marginTop: "20px" }}>
+          <div className="col-md-12">
+            <div className="alert alert-danger mb-3" role="alert">
+              Changing some settings will take time to show effect please clear
+              session or wait for 60 minutes else browse from incognito mode
+            </div>
+            <div className="card">
+              <div className="card-header">
+                <h5>Language table</h5>
+                <button
+                  className="btn btn-primary btn-icon-split float-right"
+                  data-toggle="modal"
+                  data-target="#lang-modal"
+                >
+                  <i className="tio-add-circle" />
+                  <span className="text">Add new language</span>
+                </button>
+              </div>
+              <div className="card-body">
+                <div className="table-responsive">
+                  <table
+                    className="display table table-hover "
+                    style={{ width: "100%", textAlign: "left" }}
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col">SL#</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Default Status</th>
+                        <th
+                          scope="col"
+                          style={{ width: "100px" }}
+                          className="text-center"
+                        >
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>english ( ltr )</td>
+                        <td>en</td>
+                        <td>
+                          <label className="switch">
+                            <input
+                              type="checkbox"
+                              onclick="updateStatus('https://6valley.6amtech.com/admin/business-settings/language/update-status','en')"
+                              className="status"
+                              defaultChecked
+                            />
+                            <span className="slider round" />
+                          </label>
+                        </td>
+                        <td>
+                          <label className="switch">
+                            <input
+                              type="checkbox"
+                              onclick="window.location.href ='https://6valley.6amtech.com/admin/business-settings/language/update-default-status?code=en'"
+                              className="status"
+                              defaultChecked
+                            />
+                            <span className="slider round" />
+                          </label>
+                        </td>
+                        <td className="text-center">
+                          <div className="dropdown float-right">
+                            <button
+                              className="btn btn-seconary btn-sm dropdown-toggle"
+                              type="button"
+                              id="dropdownMenuButton"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i className="tio-settings" />
+                            </button>
+                            <div
+                              className="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                className="dropdown-item"
+                                href="/admin/business-settings/language/translate/en"
+                              >
+                                Translate
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>عربي ( rtl )</td>
+                        <td>sa</td>
+                        <td>
+                          <label className="switch">
+                            <input
+                              type="checkbox"
+                              onclick="updateStatus('https://6valley.6amtech.com/admin/business-settings/language/update-status','sa')"
+                              className="status"
+                              defaultChecked
+                            />
+                            <span className="slider round" />
+                          </label>
+                        </td>
+                        <td>
+                          <label className="switch">
+                            <input
+                              type="checkbox"
+                              onclick="window.location.href ='https://6valley.6amtech.com/admin/business-settings/language/update-default-status?code=sa'"
+                              className="status"
+                            />
+                            <span className="slider round" />
+                          </label>
+                        </td>
+                        <td className="text-center">
+                          <div className="dropdown float-right">
+                            <button
+                              className="btn btn-seconary btn-sm dropdown-toggle"
+                              type="button"
+                              id="dropdownMenuButton"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i className="tio-settings" />
+                            </button>
+                            <div
+                              className="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                className="dropdown-item"
+                                data-toggle="modal"
+                                data-target="#lang-modal-update-sa"
+                              >
+                                Update
+                              </a>
+                              <a
+                                className="dropdown-item delete"
+                                id="https://6valley.6amtech.com/admin/business-settings/language/delete/sa"
+                              >
+                                Delete
+                              </a>
+                              <a
+                                className="dropdown-item"
+                                href="/admin/business-settings/language/translate/sa"
+                              >
+                                Translate
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>বাংলা ( ltr )</td>
+                        <td>bd</td>
+                        <td>
+                          <label className="switch">
+                            <input
+                              type="checkbox"
+                              onclick="updateStatus('https://6valley.6amtech.com/admin/business-settings/language/update-status','bd')"
+                              className="status"
+                            />
+                            <span className="slider round" />
+                          </label>
+                        </td>
+                        <td>
+                          <label className="switch">
+                            <input
+                              type="checkbox"
+                              onclick="window.location.href ='https://6valley.6amtech.com/admin/business-settings/language/update-default-status?code=bd'"
+                              className="status"
+                            />
+                            <span className="slider round" />
+                          </label>
+                        </td>
+                        <td className="text-center">
+                          <div className="dropdown float-right">
+                            <button
+                              className="btn btn-seconary btn-sm dropdown-toggle"
+                              type="button"
+                              id="dropdownMenuButton"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i className="tio-settings" />
+                            </button>
+                            <div
+                              className="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                className="dropdown-item"
+                                data-toggle="modal"
+                                data-target="#lang-modal-update-bd"
+                              >
+                                Update
+                              </a>
+                              <a
+                                className="dropdown-item delete"
+                                id="https://6valley.6amtech.com/admin/business-settings/language/delete/bd"
+                              >
+                                Delete
+                              </a>
+                              <a
+                                className="dropdown-item"
+                                href="/admin/business-settings/language/translate/bd"
+                              >
+                                Translate
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>हिंदी ( ltr )</td>
+                        <td>in</td>
+                        <td>
+                          <label className="switch">
+                            <input
+                              type="checkbox"
+                              onclick="updateStatus('https://6valley.6amtech.com/admin/business-settings/language/update-status','in')"
+                              className="status"
+                            />
+                            <span className="slider round" />
+                          </label>
+                        </td>
+                        <td>
+                          <label className="switch">
+                            <input
+                              type="checkbox"
+                              onclick="window.location.href ='https://6valley.6amtech.com/admin/business-settings/language/update-default-status?code=in'"
+                              className="status"
+                            />
+                            <span className="slider round" />
+                          </label>
+                        </td>
+                        <td className="text-center">
+                          <div className="dropdown float-right">
+                            <button
+                              className="btn btn-seconary btn-sm dropdown-toggle"
+                              type="button"
+                              id="dropdownMenuButton"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i className="tio-settings" />
+                            </button>
+                            <div
+                              className="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                className="dropdown-item"
+                                data-toggle="modal"
+                                data-target="#lang-modal-update-in"
+                              >
+                                Update
+                              </a>
+                              <a
+                                className="dropdown-item delete"
+                                id="https://6valley.6amtech.com/admin/business-settings/language/delete/in"
+                              >
+                                Delete
+                              </a>
+                              <a
+                                className="dropdown-item"
+                                href="/admin/business-settings/language/translate/in"
+                              >
+                                Translate
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="lang-modal"
+          tabIndex={-1}
+          role="dialog"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  New language
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <form style={{ textAlign: "left" }}>
+                <input
+                  type="hidden"
+                  name="_token"
+                  defaultValue="v89RrQ5XJh2sZuRK5Rjxee33POLaeJRflrxcSRTC"
+                />{" "}
+                <div className="modal-body">
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label
+                          htmlFor="recipient-name"
+                          className="col-form-label"
+                        >
+                          Language{" "}
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="recipient-name"
+                          name="name"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label
+                          htmlFor="message-text"
+                          className="col-form-label"
+                        >
+                          Country code
+                        </label>
+                        <select
+                          className="form-control country-var-select select2-hidden-accessible"
+                          name="code"
+                          style={{ width: "100%" }}
+                          data-select2-id={1}
+                          tabIndex={-1}
+                          aria-hidden="true"
+                        >
+                          <option
+                            value="ad"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ad.png"
+                            data-select2-id={3}
+                          >
+                            AD
+                          </option>
+                          <option
+                            value="ae"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ae.png"
+                          >
+                            AE
+                          </option>
+                          <option
+                            value="af"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/af.png"
+                          >
+                            AF
+                          </option>
+                          <option
+                            value="ag"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ag.png"
+                          >
+                            AG
+                          </option>
+                          <option
+                            value="ai"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ai.png"
+                          >
+                            AI
+                          </option>
+                          <option
+                            value="al"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/al.png"
+                          >
+                            AL
+                          </option>
+                          <option
+                            value="am"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/am.png"
+                          >
+                            AM
+                          </option>
+                          <option
+                            value="an"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/an.png"
+                          >
+                            AN
+                          </option>
+                          <option
+                            value="ao"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ao.png"
+                          >
+                            AO
+                          </option>
+                          <option
+                            value="ar"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ar.png"
+                          >
+                            AR
+                          </option>
+                          <option
+                            value="as"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/as.png"
+                          >
+                            AS
+                          </option>
+                          <option
+                            value="at"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/at.png"
+                          >
+                            AT
+                          </option>
+                          <option
+                            value="au"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/au.png"
+                          >
+                            AU
+                          </option>
+                          <option
+                            value="aw"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/aw.png"
+                          >
+                            AW
+                          </option>
+                          <option
+                            value="ax"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ax.png"
+                          >
+                            AX
+                          </option>
+                          <option
+                            value="az"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/az.png"
+                          >
+                            AZ
+                          </option>
+                          <option
+                            value="ba"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ba.png"
+                          >
+                            BA
+                          </option>
+                          <option
+                            value="bb"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bb.png"
+                          >
+                            BB
+                          </option>
+                          <option
+                            value="bd"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bd.png"
+                          >
+                            BD
+                          </option>
+                          <option
+                            value="be"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/be.png"
+                          >
+                            BE
+                          </option>
+                          <option
+                            value="bf"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bf.png"
+                          >
+                            BF
+                          </option>
+                          <option
+                            value="bg"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bg.png"
+                          >
+                            BG
+                          </option>
+                          <option
+                            value="bh"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bh.png"
+                          >
+                            BH
+                          </option>
+                          <option
+                            value="bi"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bi.png"
+                          >
+                            BI
+                          </option>
+                          <option
+                            value="bj"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bj.png"
+                          >
+                            BJ
+                          </option>
+                          <option
+                            value="bm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bm.png"
+                          >
+                            BM
+                          </option>
+                          <option
+                            value="bn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bn.png"
+                          >
+                            BN
+                          </option>
+                          <option
+                            value="bo"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bo.png"
+                          >
+                            BO
+                          </option>
+                          <option
+                            value="br"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/br.png"
+                          >
+                            BR
+                          </option>
+                          <option
+                            value="bs"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bs.png"
+                          >
+                            BS
+                          </option>
+                          <option
+                            value="bt"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bt.png"
+                          >
+                            BT
+                          </option>
+                          <option
+                            value="bv"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bv.png"
+                          >
+                            BV
+                          </option>
+                          <option
+                            value="bw"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bw.png"
+                          >
+                            BW
+                          </option>
+                          <option
+                            value="by"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/by.png"
+                          >
+                            BY
+                          </option>
+                          <option
+                            value="bz"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bz.png"
+                          >
+                            BZ
+                          </option>
+                          <option
+                            value="ca"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ca.png"
+                          >
+                            CA
+                          </option>
+                          <option
+                            value="catalonia"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/catalonia.png"
+                          >
+                            CATALONIA
+                          </option>
+                          <option
+                            value="cc"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cc.png"
+                          >
+                            CC
+                          </option>
+                          <option
+                            value="cd"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cd.png"
+                          >
+                            CD
+                          </option>
+                          <option
+                            value="cf"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cf.png"
+                          >
+                            CF
+                          </option>
+                          <option
+                            value="cg"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cg.png"
+                          >
+                            CG
+                          </option>
+                          <option
+                            value="ch"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ch.png"
+                          >
+                            CH
+                          </option>
+                          <option
+                            value="ci"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ci.png"
+                          >
+                            CI
+                          </option>
+                          <option
+                            value="ck"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ck.png"
+                          >
+                            CK
+                          </option>
+                          <option
+                            value="cl"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cl.png"
+                          >
+                            CL
+                          </option>
+                          <option
+                            value="cm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cm.png"
+                          >
+                            CM
+                          </option>
+                          <option
+                            value="cn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cn.png"
+                          >
+                            CN
+                          </option>
+                          <option
+                            value="co"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/co.png"
+                          >
+                            CO
+                          </option>
+                          <option
+                            value="cr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cr.png"
+                          >
+                            CR
+                          </option>
+                          <option
+                            value="cs"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cs.png"
+                          >
+                            CS
+                          </option>
+                          <option
+                            value="cu"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cu.png"
+                          >
+                            CU
+                          </option>
+                          <option
+                            value="cv"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cv.png"
+                          >
+                            CV
+                          </option>
+                          <option
+                            value="cx"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cx.png"
+                          >
+                            CX
+                          </option>
+                          <option
+                            value="cy"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cy.png"
+                          >
+                            CY
+                          </option>
+                          <option
+                            value="cz"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/cz.png"
+                          >
+                            CZ
+                          </option>
+                          <option
+                            value="de"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/de.png"
+                          >
+                            DE
+                          </option>
+                          <option
+                            value="dj"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/dj.png"
+                          >
+                            DJ
+                          </option>
+                          <option
+                            value="dk"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/dk.png"
+                          >
+                            DK
+                          </option>
+                          <option
+                            value="dm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/dm.png"
+                          >
+                            DM
+                          </option>
+                          <option
+                            value="do"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/do.png"
+                          >
+                            DO
+                          </option>
+                          <option
+                            value="dz"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/dz.png"
+                          >
+                            DZ
+                          </option>
+                          <option
+                            value="ec"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ec.png"
+                          >
+                            EC
+                          </option>
+                          <option
+                            value="ee"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ee.png"
+                          >
+                            EE
+                          </option>
+                          <option
+                            value="eg"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/eg.png"
+                          >
+                            EG
+                          </option>
+                          <option
+                            value="eh"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/eh.png"
+                          >
+                            EH
+                          </option>
+                          <option
+                            value="england"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/england.png"
+                          >
+                            ENGLAND
+                          </option>
+                          <option
+                            value="er"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/er.png"
+                          >
+                            ER
+                          </option>
+                          <option
+                            value="es"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/es.png"
+                          >
+                            ES
+                          </option>
+                          <option
+                            value="et"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/et.png"
+                          >
+                            ET
+                          </option>
+                          <option
+                            value="europeanunion"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/europeanunion.png"
+                          >
+                            EUROPEANUNION
+                          </option>
+                          <option
+                            value="fam"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/fam.png"
+                          >
+                            FAM
+                          </option>
+                          <option
+                            value="fi"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/fi.png"
+                          >
+                            FI
+                          </option>
+                          <option
+                            value="fj"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/fj.png"
+                          >
+                            FJ
+                          </option>
+                          <option
+                            value="fk"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/fk.png"
+                          >
+                            FK
+                          </option>
+                          <option
+                            value="fm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/fm.png"
+                          >
+                            FM
+                          </option>
+                          <option
+                            value="fo"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/fo.png"
+                          >
+                            FO
+                          </option>
+                          <option
+                            value="fr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/fr.png"
+                          >
+                            FR
+                          </option>
+                          <option
+                            value="ga"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ga.png"
+                          >
+                            GA
+                          </option>
+                          <option
+                            value="gb"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gb.png"
+                          >
+                            GB
+                          </option>
+                          <option
+                            value="gd"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gd.png"
+                          >
+                            GD
+                          </option>
+                          <option
+                            value="ge"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ge.png"
+                          >
+                            GE
+                          </option>
+                          <option
+                            value="gf"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gf.png"
+                          >
+                            GF
+                          </option>
+                          <option
+                            value="gh"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gh.png"
+                          >
+                            GH
+                          </option>
+                          <option
+                            value="gi"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gi.png"
+                          >
+                            GI
+                          </option>
+                          <option
+                            value="gl"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gl.png"
+                          >
+                            GL
+                          </option>
+                          <option
+                            value="gm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gm.png"
+                          >
+                            GM
+                          </option>
+                          <option
+                            value="gn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gn.png"
+                          >
+                            GN
+                          </option>
+                          <option
+                            value="gp"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gp.png"
+                          >
+                            GP
+                          </option>
+                          <option
+                            value="gq"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gq.png"
+                          >
+                            GQ
+                          </option>
+                          <option
+                            value="gr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gr.png"
+                          >
+                            GR
+                          </option>
+                          <option
+                            value="gs"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gs.png"
+                          >
+                            GS
+                          </option>
+                          <option
+                            value="gt"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gt.png"
+                          >
+                            GT
+                          </option>
+                          <option
+                            value="gu"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gu.png"
+                          >
+                            GU
+                          </option>
+                          <option
+                            value="gw"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gw.png"
+                          >
+                            GW
+                          </option>
+                          <option
+                            value="gy"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/gy.png"
+                          >
+                            GY
+                          </option>
+                          <option
+                            value="hk"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/hk.png"
+                          >
+                            HK
+                          </option>
+                          <option
+                            value="hm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/hm.png"
+                          >
+                            HM
+                          </option>
+                          <option
+                            value="hn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/hn.png"
+                          >
+                            HN
+                          </option>
+                          <option
+                            value="hr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/hr.png"
+                          >
+                            HR
+                          </option>
+                          <option
+                            value="ht"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ht.png"
+                          >
+                            HT
+                          </option>
+                          <option
+                            value="hu"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/hu.png"
+                          >
+                            HU
+                          </option>
+                          <option
+                            value="id"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/id.png"
+                          >
+                            ID
+                          </option>
+                          <option
+                            value="ie"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ie.png"
+                          >
+                            IE
+                          </option>
+                          <option
+                            value="il"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/il.png"
+                          >
+                            IL
+                          </option>
+                          <option
+                            value="in"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/in.png"
+                          >
+                            IN
+                          </option>
+                          <option
+                            value="io"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/io.png"
+                          >
+                            IO
+                          </option>
+                          <option
+                            value="iq"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/iq.png"
+                          >
+                            IQ
+                          </option>
+                          <option
+                            value="ir"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ir.png"
+                          >
+                            IR
+                          </option>
+                          <option
+                            value="is"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/is.png"
+                          >
+                            IS
+                          </option>
+                          <option
+                            value="it"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/it.png"
+                          >
+                            IT
+                          </option>
+                          <option
+                            value="jm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/jm.png"
+                          >
+                            JM
+                          </option>
+                          <option
+                            value="jo"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/jo.png"
+                          >
+                            JO
+                          </option>
+                          <option
+                            value="jp"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/jp.png"
+                          >
+                            JP
+                          </option>
+                          <option
+                            value="ke"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ke.png"
+                          >
+                            KE
+                          </option>
+                          <option
+                            value="kg"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/kg.png"
+                          >
+                            KG
+                          </option>
+                          <option
+                            value="kh"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/kh.png"
+                          >
+                            KH
+                          </option>
+                          <option
+                            value="ki"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ki.png"
+                          >
+                            KI
+                          </option>
+                          <option
+                            value="km"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/km.png"
+                          >
+                            KM
+                          </option>
+                          <option
+                            value="kn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/kn.png"
+                          >
+                            KN
+                          </option>
+                          <option
+                            value="kp"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/kp.png"
+                          >
+                            KP
+                          </option>
+                          <option
+                            value="kr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/kr.png"
+                          >
+                            KR
+                          </option>
+                          <option
+                            value="kw"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/kw.png"
+                          >
+                            KW
+                          </option>
+                          <option
+                            value="ky"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ky.png"
+                          >
+                            KY
+                          </option>
+                          <option
+                            value="kz"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/kz.png"
+                          >
+                            KZ
+                          </option>
+                          <option
+                            value="la"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/la.png"
+                          >
+                            LA
+                          </option>
+                          <option
+                            value="lb"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/lb.png"
+                          >
+                            LB
+                          </option>
+                          <option
+                            value="lc"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/lc.png"
+                          >
+                            LC
+                          </option>
+                          <option
+                            value="li"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/li.png"
+                          >
+                            LI
+                          </option>
+                          <option
+                            value="lk"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/lk.png"
+                          >
+                            LK
+                          </option>
+                          <option
+                            value="lr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/lr.png"
+                          >
+                            LR
+                          </option>
+                          <option
+                            value="ls"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ls.png"
+                          >
+                            LS
+                          </option>
+                          <option
+                            value="lt"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/lt.png"
+                          >
+                            LT
+                          </option>
+                          <option
+                            value="lu"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/lu.png"
+                          >
+                            LU
+                          </option>
+                          <option
+                            value="lv"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/lv.png"
+                          >
+                            LV
+                          </option>
+                          <option
+                            value="ly"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ly.png"
+                          >
+                            LY
+                          </option>
+                          <option
+                            value="ma"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ma.png"
+                          >
+                            MA
+                          </option>
+                          <option
+                            value="mc"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mc.png"
+                          >
+                            MC
+                          </option>
+                          <option
+                            value="md"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/md.png"
+                          >
+                            MD
+                          </option>
+                          <option
+                            value="me"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/me.png"
+                          >
+                            ME
+                          </option>
+                          <option
+                            value="mg"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mg.png"
+                          >
+                            MG
+                          </option>
+                          <option
+                            value="mh"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mh.png"
+                          >
+                            MH
+                          </option>
+                          <option
+                            value="mk"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mk.png"
+                          >
+                            MK
+                          </option>
+                          <option
+                            value="ml"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ml.png"
+                          >
+                            ML
+                          </option>
+                          <option
+                            value="mm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mm.png"
+                          >
+                            MM
+                          </option>
+                          <option
+                            value="mn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mn.png"
+                          >
+                            MN
+                          </option>
+                          <option
+                            value="mo"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mo.png"
+                          >
+                            MO
+                          </option>
+                          <option
+                            value="mp"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mp.png"
+                          >
+                            MP
+                          </option>
+                          <option
+                            value="mq"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mq.png"
+                          >
+                            MQ
+                          </option>
+                          <option
+                            value="mr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mr.png"
+                          >
+                            MR
+                          </option>
+                          <option
+                            value="ms"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ms.png"
+                          >
+                            MS
+                          </option>
+                          <option
+                            value="mt"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mt.png"
+                          >
+                            MT
+                          </option>
+                          <option
+                            value="mu"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mu.png"
+                          >
+                            MU
+                          </option>
+                          <option
+                            value="mv"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mv.png"
+                          >
+                            MV
+                          </option>
+                          <option
+                            value="mw"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mw.png"
+                          >
+                            MW
+                          </option>
+                          <option
+                            value="mx"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mx.png"
+                          >
+                            MX
+                          </option>
+                          <option
+                            value="my"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/my.png"
+                          >
+                            MY
+                          </option>
+                          <option
+                            value="mz"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/mz.png"
+                          >
+                            MZ
+                          </option>
+                          <option
+                            value="na"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/na.png"
+                          >
+                            NA
+                          </option>
+                          <option
+                            value="nc"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/nc.png"
+                          >
+                            NC
+                          </option>
+                          <option
+                            value="ne"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ne.png"
+                          >
+                            NE
+                          </option>
+                          <option
+                            value="nf"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/nf.png"
+                          >
+                            NF
+                          </option>
+                          <option
+                            value="ng"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ng.png"
+                          >
+                            NG
+                          </option>
+                          <option
+                            value="ni"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ni.png"
+                          >
+                            NI
+                          </option>
+                          <option
+                            value="nl"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/nl.png"
+                          >
+                            NL
+                          </option>
+                          <option
+                            value="no"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/no.png"
+                          >
+                            NO
+                          </option>
+                          <option
+                            value="np"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/np.png"
+                          >
+                            NP
+                          </option>
+                          <option
+                            value="nr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/nr.png"
+                          >
+                            NR
+                          </option>
+                          <option
+                            value="nu"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/nu.png"
+                          >
+                            NU
+                          </option>
+                          <option
+                            value="nz"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/nz.png"
+                          >
+                            NZ
+                          </option>
+                          <option
+                            value="om"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/om.png"
+                          >
+                            OM
+                          </option>
+                          <option
+                            value="pa"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pa.png"
+                          >
+                            PA
+                          </option>
+                          <option
+                            value="pe"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pe.png"
+                          >
+                            PE
+                          </option>
+                          <option
+                            value="pf"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pf.png"
+                          >
+                            PF
+                          </option>
+                          <option
+                            value="pg"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pg.png"
+                          >
+                            PG
+                          </option>
+                          <option
+                            value="ph"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ph.png"
+                          >
+                            PH
+                          </option>
+                          <option
+                            value="pk"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pk.png"
+                          >
+                            PK
+                          </option>
+                          <option
+                            value="pl"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pl.png"
+                          >
+                            PL
+                          </option>
+                          <option
+                            value="pm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pm.png"
+                          >
+                            PM
+                          </option>
+                          <option
+                            value="pn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pn.png"
+                          >
+                            PN
+                          </option>
+                          <option
+                            value="pr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pr.png"
+                          >
+                            PR
+                          </option>
+                          <option
+                            value="ps"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ps.png"
+                          >
+                            PS
+                          </option>
+                          <option
+                            value="pt"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pt.png"
+                          >
+                            PT
+                          </option>
+                          <option
+                            value="pw"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/pw.png"
+                          >
+                            PW
+                          </option>
+                          <option
+                            value="py"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/py.png"
+                          >
+                            PY
+                          </option>
+                          <option
+                            value="qa"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/qa.png"
+                          >
+                            QA
+                          </option>
+                          <option
+                            value="re"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/re.png"
+                          >
+                            RE
+                          </option>
+                          <option
+                            value="ro"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ro.png"
+                          >
+                            RO
+                          </option>
+                          <option
+                            value="rs"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/rs.png"
+                          >
+                            RS
+                          </option>
+                          <option
+                            value="ru"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ru.png"
+                          >
+                            RU
+                          </option>
+                          <option
+                            value="rw"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/rw.png"
+                          >
+                            RW
+                          </option>
+                          <option
+                            value="sa"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sa.png"
+                          >
+                            SA
+                          </option>
+                          <option
+                            value="sb"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sb.png"
+                          >
+                            SB
+                          </option>
+                          <option
+                            value="sc"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sc.png"
+                          >
+                            SC
+                          </option>
+                          <option
+                            value="scotland"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/scotland.png"
+                          >
+                            SCOTLAND
+                          </option>
+                          <option
+                            value="sd"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sd.png"
+                          >
+                            SD
+                          </option>
+                          <option
+                            value="se"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/se.png"
+                          >
+                            SE
+                          </option>
+                          <option
+                            value="sg"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sg.png"
+                          >
+                            SG
+                          </option>
+                          <option
+                            value="sh"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sh.png"
+                          >
+                            SH
+                          </option>
+                          <option
+                            value="si"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/si.png"
+                          >
+                            SI
+                          </option>
+                          <option
+                            value="sj"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sj.png"
+                          >
+                            SJ
+                          </option>
+                          <option
+                            value="sk"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sk.png"
+                          >
+                            SK
+                          </option>
+                          <option
+                            value="sl"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sl.png"
+                          >
+                            SL
+                          </option>
+                          <option
+                            value="sm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sm.png"
+                          >
+                            SM
+                          </option>
+                          <option
+                            value="sn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sn.png"
+                          >
+                            SN
+                          </option>
+                          <option
+                            value="so"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/so.png"
+                          >
+                            SO
+                          </option>
+                          <option
+                            value="sr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sr.png"
+                          >
+                            SR
+                          </option>
+                          <option
+                            value="st"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/st.png"
+                          >
+                            ST
+                          </option>
+                          <option
+                            value="sv"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sv.png"
+                          >
+                            SV
+                          </option>
+                          <option
+                            value="sy"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sy.png"
+                          >
+                            SY
+                          </option>
+                          <option
+                            value="sz"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sz.png"
+                          >
+                            SZ
+                          </option>
+                          <option
+                            value="tc"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tc.png"
+                          >
+                            TC
+                          </option>
+                          <option
+                            value="td"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/td.png"
+                          >
+                            TD
+                          </option>
+                          <option
+                            value="tf"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tf.png"
+                          >
+                            TF
+                          </option>
+                          <option
+                            value="tg"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tg.png"
+                          >
+                            TG
+                          </option>
+                          <option
+                            value="th"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/th.png"
+                          >
+                            TH
+                          </option>
+                          <option
+                            value="tj"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tj.png"
+                          >
+                            TJ
+                          </option>
+                          <option
+                            value="tk"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tk.png"
+                          >
+                            TK
+                          </option>
+                          <option
+                            value="tl"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tl.png"
+                          >
+                            TL
+                          </option>
+                          <option
+                            value="tm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tm.png"
+                          >
+                            TM
+                          </option>
+                          <option
+                            value="tn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tn.png"
+                          >
+                            TN
+                          </option>
+                          <option
+                            value="to"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/to.png"
+                          >
+                            TO
+                          </option>
+                          <option
+                            value="tr"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tr.png"
+                          >
+                            TR
+                          </option>
+                          <option
+                            value="tt"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tt.png"
+                          >
+                            TT
+                          </option>
+                          <option
+                            value="tv"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tv.png"
+                          >
+                            TV
+                          </option>
+                          <option
+                            value="tw"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tw.png"
+                          >
+                            TW
+                          </option>
+                          <option
+                            value="tz"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/tz.png"
+                          >
+                            TZ
+                          </option>
+                          <option
+                            value="ua"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ua.png"
+                          >
+                            UA
+                          </option>
+                          <option
+                            value="ug"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ug.png"
+                          >
+                            UG
+                          </option>
+                          <option
+                            value="um"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/um.png"
+                          >
+                            UM
+                          </option>
+                          <option
+                            value="uy"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/uy.png"
+                          >
+                            UY
+                          </option>
+                          <option
+                            value="uz"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/uz.png"
+                          >
+                            UZ
+                          </option>
+                          <option
+                            value="va"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/va.png"
+                          >
+                            VA
+                          </option>
+                          <option
+                            value="vc"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/vc.png"
+                          >
+                            VC
+                          </option>
+                          <option
+                            value="ve"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ve.png"
+                          >
+                            VE
+                          </option>
+                          <option
+                            value="vg"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/vg.png"
+                          >
+                            VG
+                          </option>
+                          <option
+                            value="vi"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/vi.png"
+                          >
+                            VI
+                          </option>
+                          <option
+                            value="vn"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/vn.png"
+                          >
+                            VN
+                          </option>
+                          <option
+                            value="vu"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/vu.png"
+                          >
+                            VU
+                          </option>
+                          <option
+                            value="wales"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/wales.png"
+                          >
+                            WALES
+                          </option>
+                          <option
+                            value="wf"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/wf.png"
+                          >
+                            WF
+                          </option>
+                          <option
+                            value="ws"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ws.png"
+                          >
+                            WS
+                          </option>
+                          <option
+                            value="ye"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ye.png"
+                          >
+                            YE
+                          </option>
+                          <option
+                            value="yt"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/yt.png"
+                          >
+                            YT
+                          </option>
+                          <option
+                            value="za"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/za.png"
+                          >
+                            ZA
+                          </option>
+                          <option
+                            value="zm"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/zm.png"
+                          >
+                            ZM
+                          </option>
+                          <option
+                            value="zw"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/zw.png"
+                          >
+                            ZW
+                          </option>
+                        </select>
+                        <span
+                          className="select2 select2-container select2-container--default"
+                          dir="ltr"
+                          data-select2-id={2}
+                          style={{ width: "100%" }}
+                        >
+                          <span className="selection">
+                            <span
+                              className="select2-selection select2-selection--single"
+                              role="combobox"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                              tabIndex={0}
+                              aria-disabled="false"
+                              aria-labelledby="select2-code-hq-container"
+                            >
+                              <span
+                                className="select2-selection__rendered"
+                                id="select2-code-hq-container"
+                                role="textbox"
+                                aria-readonly="true"
+                                title="https://6valley.6amtech.com/public/assets/front-end/img/flags/ad.png"
+                              >
+                                <img
+                                  className="image-preview"
+                                  src="https://6valley.6amtech.com/public/assets/front-end/img/flags/ad.png"
+                                />
+                                AD
+                              </span>
+                              <span
+                                className="select2-selection__arrow"
+                                role="presentation"
+                              >
+                                <b role="presentation" />
+                              </span>
+                            </span>
+                          </span>
+                          <span
+                            className="dropdown-wrapper"
+                            aria-hidden="true"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label className="col-form-label">Direction :</label>
+                        <select className="form-control" name="direction">
+                          <option value="ltr">LTR</option>
+                          <option value="rtl">RTL</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" className="btn btn-primary">
+                    Add <i className="fa fa-plus" />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="lang-modal-update-en"
+          tabIndex={-1}
+          role="dialog"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  New language
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <form>
+                <input
+                  type="hidden"
+                  name="_token"
+                  defaultValue="v89RrQ5XJh2sZuRK5Rjxee33POLaeJRflrxcSRTC"
+                />{" "}
+                <div className="modal-body">
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label
+                          htmlFor="recipient-name"
+                          className="col-form-label"
+                        >
+                          Language{" "}
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          defaultValue="english"
+                          name="name"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label
+                          htmlFor="message-text"
+                          className="col-form-label"
+                        >
+                          Country code
+                        </label>
+                        <select
+                          className="form-control country-var-select select2-hidden-accessible"
+                          name="code"
+                          style={{ width: "100%" }}
+                          data-select2-id={4}
+                          tabIndex={-1}
+                          aria-hidden="true"
+                        ></select>
+                        <span
+                          className="select2 select2-container select2-container--default"
+                          dir="ltr"
+                          data-select2-id={5}
+                          style={{ width: "100%" }}
+                        >
+                          <span className="selection">
+                            <span
+                              className="select2-selection select2-selection--single"
+                              role="combobox"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                              tabIndex={0}
+                              aria-disabled="false"
+                              aria-labelledby="select2-code-d8-container"
+                            >
+                              <span
+                                className="select2-selection__rendered"
+                                id="select2-code-d8-container"
+                                role="textbox"
+                                aria-readonly="true"
+                              />
+                              <span
+                                className="select2-selection__arrow"
+                                role="presentation"
+                              >
+                                <b role="presentation" />
+                              </span>
+                            </span>
+                          </span>
+                          <span
+                            className="dropdown-wrapper"
+                            aria-hidden="true"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label className="col-form-label">Direction :</label>
+                        <select className="form-control" name="direction">
+                          <option value="ltr" selected>
+                            LTR
+                          </option>
+                          <option value="rtl">RTL</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" className="btn btn-primary">
+                    Update <i className="fa fa-plus" />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="lang-modal-update-sa"
+          tabIndex={-1}
+          role="dialog"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  New language
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <form>
+                <input
+                  type="hidden"
+                  name="_token"
+                  defaultValue="v89RrQ5XJh2sZuRK5Rjxee33POLaeJRflrxcSRTC"
+                />{" "}
+                <div className="modal-body">
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label
+                          htmlFor="recipient-name"
+                          className="col-form-label"
+                        >
+                          Language{" "}
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          defaultValue="عربي"
+                          name="name"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label
+                          htmlFor="message-text"
+                          className="col-form-label"
+                        >
+                          Country code
+                        </label>
+                        <select
+                          className="form-control country-var-select select2-hidden-accessible"
+                          name="code"
+                          style={{ width: "100%" }}
+                          data-select2-id={6}
+                          tabIndex={-1}
+                          aria-hidden="true"
+                        >
+                          <option
+                            value="sa"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sa.png"
+                            data-select2-id={8}
+                          >
+                            SA
+                          </option>
+                        </select>
+                        <span
+                          className="select2 select2-container select2-container--default"
+                          dir="ltr"
+                          data-select2-id={7}
+                          style={{ width: "100%" }}
+                        >
+                          <span className="selection">
+                            <span
+                              className="select2-selection select2-selection--single"
+                              role="combobox"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                              tabIndex={0}
+                              aria-disabled="false"
+                              aria-labelledby="select2-code-w7-container"
+                            >
+                              <span
+                                className="select2-selection__rendered"
+                                id="select2-code-w7-container"
+                                role="textbox"
+                                aria-readonly="true"
+                                title="https://6valley.6amtech.com/public/assets/front-end/img/flags/sa.png"
+                              >
+                                <img
+                                  className="image-preview"
+                                  src="https://6valley.6amtech.com/public/assets/front-end/img/flags/sa.png"
+                                />
+                                SA
+                              </span>
+                              <span
+                                className="select2-selection__arrow"
+                                role="presentation"
+                              >
+                                <b role="presentation" />
+                              </span>
+                            </span>
+                          </span>
+                          <span
+                            className="dropdown-wrapper"
+                            aria-hidden="true"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label className="col-form-label">Direction :</label>
+                        <select className="form-control" name="direction">
+                          <option value="ltr">LTR</option>
+                          <option value="rtl" selected>
+                            RTL
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" className="btn btn-primary">
+                    Update <i className="fa fa-plus" />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="lang-modal-update-bd"
+          tabIndex={-1}
+          role="dialog"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  New language
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <form>
+                <input
+                  type="hidden"
+                  name="_token"
+                  defaultValue="v89RrQ5XJh2sZuRK5Rjxee33POLaeJRflrxcSRTC"
+                />{" "}
+                <div className="modal-body">
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label
+                          htmlFor="recipient-name"
+                          className="col-form-label"
+                        >
+                          Language{" "}
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          defaultValue="বাংলা"
+                          name="name"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label
+                          htmlFor="message-text"
+                          className="col-form-label"
+                        >
+                          Country code
+                        </label>
+                        <select
+                          className="form-control country-var-select select2-hidden-accessible"
+                          name="code"
+                          style={{ width: "100%" }}
+                          data-select2-id={9}
+                          tabIndex={-1}
+                          aria-hidden="true"
+                        >
+                          <option
+                            value="bd"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bd.png"
+                            data-select2-id={11}
+                          >
+                            BD
+                          </option>
+                        </select>
+                        <span
+                          className="select2 select2-container select2-container--default"
+                          dir="ltr"
+                          data-select2-id={10}
+                          style={{ width: "100%" }}
+                        >
+                          <span className="selection">
+                            <span
+                              className="select2-selection select2-selection--single"
+                              role="combobox"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                              tabIndex={0}
+                              aria-disabled="false"
+                              aria-labelledby="select2-code-ax-container"
+                            >
+                              <span
+                                className="select2-selection__rendered"
+                                id="select2-code-ax-container"
+                                role="textbox"
+                                aria-readonly="true"
+                                title="https://6valley.6amtech.com/public/assets/front-end/img/flags/bd.png"
+                              >
+                                <img
+                                  className="image-preview"
+                                  src="https://6valley.6amtech.com/public/assets/front-end/img/flags/bd.png"
+                                />
+                                BD
+                              </span>
+                              <span
+                                className="select2-selection__arrow"
+                                role="presentation"
+                              >
+                                <b role="presentation" />
+                              </span>
+                            </span>
+                          </span>
+                          <span
+                            className="dropdown-wrapper"
+                            aria-hidden="true"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label className="col-form-label">Direction :</label>
+                        <select className="form-control" name="direction">
+                          <option value="ltr" selected>
+                            LTR
+                          </option>
+                          <option value="rtl">RTL</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" className="btn btn-primary">
+                    Update <i className="fa fa-plus" />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="lang-modal-update-in"
+          tabIndex={-1}
+          role="dialog"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  New language
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <form>
+                <input
+                  type="hidden"
+                  name="_token"
+                  defaultValue="v89RrQ5XJh2sZuRK5Rjxee33POLaeJRflrxcSRTC"
+                />{" "}
+                <div className="modal-body">
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label
+                          htmlFor="recipient-name"
+                          className="col-form-label"
+                        >
+                          Language{" "}
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          defaultValue="हिंदी"
+                          name="name"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label
+                          htmlFor="message-text"
+                          className="col-form-label"
+                        >
+                          Country code
+                        </label>
+                        <select
+                          className="form-control country-var-select select2-hidden-accessible"
+                          name="code"
+                          style={{ width: "100%" }}
+                          data-select2-id={12}
+                          tabIndex={-1}
+                          aria-hidden="true"
+                        >
+                          <option
+                            value="in"
+                            title="https://6valley.6amtech.com/public/assets/front-end/img/flags/in.png"
+                            data-select2-id={14}
+                          >
+                            IN
+                          </option>
+                        </select>
+                        <span
+                          className="select2 select2-container select2-container--default"
+                          dir="ltr"
+                          data-select2-id={13}
+                          style={{ width: "100%" }}
+                        >
+                          <span className="selection">
+                            <span
+                              className="select2-selection select2-selection--single"
+                              role="combobox"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                              tabIndex={0}
+                              aria-disabled="false"
+                              aria-labelledby="select2-code-7z-container"
+                            >
+                              <span
+                                className="select2-selection__rendered"
+                                id="select2-code-7z-container"
+                                role="textbox"
+                                aria-readonly="true"
+                                title="https://6valley.6amtech.com/public/assets/front-end/img/flags/in.png"
+                              >
+                                <img
+                                  className="image-preview"
+                                  src="https://6valley.6amtech.com/public/assets/front-end/img/flags/in.png"
+                                />
+                                IN
+                              </span>
+                              <span
+                                className="select2-selection__arrow"
+                                role="presentation"
+                              >
+                                <b role="presentation" />
+                              </span>
+                            </span>
+                          </span>
+                          <span
+                            className="dropdown-wrapper"
+                            aria-hidden="true"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-group">
+                        <label className="col-form-label">Direction :</label>
+                        <select className="form-control" name="direction">
+                          <option value="ltr" selected>
+                            LTR
+                          </option>
+                          <option value="rtl">RTL</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" className="btn btn-primary">
+                    Update <i className="fa fa-plus" />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+export default AdminBusinessSettingsLanguage;

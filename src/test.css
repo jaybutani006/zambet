@@ -1,0 +1,50 @@
+/* table thead th {
+  padding: 3px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 25vw;
+  background: white;
+} */
+
+/* table thead th:nth-child(1) {
+  position: sticky;
+  left: 0px;
+  z-index: 2;
+}
+table thead th:nth-child(2) {
+  position: sticky;
+  left: 62.88px;
+  z-index: 2;
+}
+table thead th:nth-child(3) {
+  position: sticky;
+  left: 200px;
+  z-index: 2;
+}
+
+table tbody td:nth-child(1) {
+  position: sticky;
+  left: 0px;
+  z-index: 2;
+}
+table tbody td:nth-child(2) {
+  position: sticky;
+  left: 62.88px;
+  z-index: 2;
+}
+table tbody td:nth-child(3) {
+  position: sticky;
+  left: 209px;
+  z-index: 2;
+} */
+
+/* .form-control {
+  display: inline-block;
+  width: auto;
+} */
+
+/* .form-control-input { */
+  /* display: inline-block; */
+  /* width: 100%;
+} */

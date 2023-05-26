@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Titillium+Web:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap');
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f8fa94;
+  font-family: 'titillium web','sans-serif';
+
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+    background-color: #fff;
+    
+    display: block;
+    margin: 8px;
+} */
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+
+
+    .close {
+        z-index: 99;
+        background: white !important;
+        padding: 3px 8px !important;
+        margin: -23px -12px -1rem auto !important;
+        border-radius: 50%;
+    }
+
+
+
+  
+    .card-body.search-result-box {
+        overflow: scroll;
+        height: 400px;
+        overflow-x: hidden;
+    }
+
+    .active .seller {
+        font-weight: 700;
+    }
+
+    .for-count-value {
+        position: absolute;
+
+        right: 0.6875rem;;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        color: #1b7fed;
+
+        font-size: .75rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.25rem;
+    }
+
+    .count-value {
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        color: #1b7fed;
+
+        font-size: .75rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.25rem;
+    }
+
+    @media (min-width: 992px) {
+        .navbar-sticky.navbar-stuck .navbar-stuck-menu.show {
+            display: block;
+            height: 55px !important;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .navbar-stuck-menu {
+            background-color: #1b7fed;
+            line-height: 15px;
+            padding-bottom: 6px;
+        }
+
+    }
+
+    @media (max-width: 767px) {
+        .search_button {
+            background-color: transparent !important;
+        }
+
+        .search_button .input-group-text i {
+            color: #1b7fed                              !important;
+        }
+
+        .navbar-expand-md .dropdown-menu > .dropdown > .dropdown-toggle {
+            position: relative;
+            padding-right: 1.95rem;
+        }
+
+        .mega-nav1 {
+            background: white;
+            color: #1b7fed                              !important;
+            border-radius: 3px;
+        }
+
+        .mega-nav1 .nav-link {
+            color: #1b7fed                              !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tab-logo {
+            width: 10rem;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .mobile-head {
+            padding: 3px;
+        }
+    }
+
+    @media (max-width: 471px) {
+        .navbar-brand img {
+
+        }
+
+        .mega-nav1 {
+            background: white;
+            color: #1b7fed                              !important;
+            border-radius: 3px;
+        }
+
+        .mega-nav1 .nav-link {
+            color: #1b7fed                              !important;
+        }
+    }
+    #anouncement {
+        width: 100%;
+        padding: 2px 0;
+        text-align: center;
+        color:white;
+    }
+    @media (min-width: 1280px){
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+        max-width: 1280px;
+    }
+  }
+  
+  .container{
+    max-width: 1280px;
+  }
+
+  .just-padding {
+      padding: 15px;
+      border: 1px solid #ccccccb3;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      height: 100%;
+      background-color: white;
+  }
+
+
+
+
+    .social-media :hover {
+        color: #f7931e !important;
+    }
+    .widget-list-link{
+        color: #999898 !important;
+    }
+
+    .widget-list-link:hover{
+        color: white !important;
+    }
+
+
+
+
+
+
+
+ 
+        .password-toggle-btn .custom-control-input:checked ~ .password-toggle-indicator {
+            color: #1b7fed;
+        }
+
+        .for-no-account {
+            margin: auto;
+            text-align: center;
+        }
+   
