@@ -9,6 +9,8 @@ import { Context } from "context/newContext";
 import productImage from "assets/productImage.jpg";
 import SellerDashboardBreadCrumb from "components/header/SellerDashboardBreadCrumb";
 import { defaultAPIErrorHandler } from "api/api";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 function SellerProductReturnList() {
   const [state, dispatch] = useContext(Context);
@@ -18,6 +20,18 @@ function SellerProductReturnList() {
   const [search, setSearch] = useState("");
   //
   const [resDeliveryBoys, setResDeliveryBoys] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState({});
+  const [productIdBoy, setProductIdBoy] = useState({});
+  const [modalShow, setModalShow] = React.useState(false);
+  const [boy, setBoy] = useState("");
+
+  const handleChange = (event, productId) => {
+    const newOption = event.target.value;
+    setSelectedOptions(newOption);
+    setProductIdBoy(productId);
+    // Show alert for the specific product
+    setModalShow(true);
+  };
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
@@ -34,6 +48,48 @@ function SellerProductReturnList() {
     //   setProductDetails((prev) => ({ ...prev, [name]: e.target.value }));
     // }
   };
+
+  function MyVerticallyCenteredModal(props) {
+    const DelBoy = async () => {
+      const token = localStorage.getItem("sellerToken");
+      const res = await fetch(
+        process.env.REACT_APP_BASEURL +
+          `/api/order/asigndeliveryboy?oid=${productIdBoy}`,
+        {
+          method: "PUT",
+          headers: {
+            Authorization: token,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            db_id: selectedOptions,
+            in_which: "productreturn",
+          }),
+        }
+      );
+      const data = await res.json();
+      console.log(data);
+      setBoy(data);
+      setModalShow(false);
+    };
+
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Body>
+          <h4>Are You Want To Sure Selete This Delivery Boy</h4>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={DelBoy}>Yes</Button>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
 
   const handleExport = () => {
     axios({
@@ -70,7 +126,7 @@ function SellerProductReturnList() {
         link.parentNode.removeChild(link);
       })
       .catch((error) => {
-        defaultAPIErrorHandler(error)
+        defaultAPIErrorHandler(error);
       });
   };
 
@@ -341,6 +397,10 @@ function SellerProductReturnList() {
                           </td>
                         </tr>
                       )}
+                      <MyVerticallyCenteredModal
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                      />
                       {!!productList.length &&
                         productList.map((item, index) => (
                           <tr key={index}>
@@ -433,17 +493,24 @@ function SellerProductReturnList() {
                               <select
                                 className="form-control form-control-input"
                                 name="db_selected"
-                                // onChange={(e) => handleEditItem(e, index)}
+                                value={
+                                  selectedOptions[item.pid] || item.fullname
+                                }
+                                onChange={(e) => {
+                                  handleChange(e, item.oid);
+                                }}
                               >
-                                <option value="" selected>
+                                <option value="" selected disabled>
                                   ---Select---
                                 </option>
                                 {resDeliveryBoys?.length &&
-                                  resDeliveryBoys?.map((item2, index) => (
+                                  resDeliveryBoys.map((item2, index) => (
                                     <option
                                       key={index}
                                       value={item2?._id}
-                                      selected={item2?._id === item?.db_id}
+                                      selected={
+                                        item2?._id === selectedOptions[item.pid]
+                                      }
                                     >
                                       {item2?.fullname}
                                     </option>

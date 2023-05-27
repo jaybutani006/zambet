@@ -248,7 +248,7 @@ function SellerHeader({ toggleSideBar, isOpen }) {
       <header
         id="header"
         style={{ backgroundColor: "rgba(59, 113, 222, 1)" }}
-        className="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered"
+        className="navbar AdminHeader navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered"
       >
         {/* <ToastContainer position="top-center">
         <Toast>
@@ -509,7 +509,7 @@ function SellerHeader({ toggleSideBar, isOpen }) {
                           />
                         </div>
                         <div className="media-body">
-                          <span className="card-title h5">
+                          <span className="card-title h6">
                             {state.sellerProfile
                               ? `${state.sellerProfile?.first_name}` +
                                 `${state.sellerProfile?.last_name}`

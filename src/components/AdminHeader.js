@@ -195,7 +195,7 @@ function AdminHeader({ toggleSideBar, isOpen }) {
       <header
         id="header"
         style={{ backgroundColor: "rgba(59, 113, 222, 1)" }}
-        className="navbar navbar-expand-sm navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered"
+        className="navbar AdminHeader navbar-expand-sm navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered"
       >
         <div className="navbar-nav-wrap">
           <div className="navbar-brand-wrapper">

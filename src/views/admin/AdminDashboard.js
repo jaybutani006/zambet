@@ -67,7 +67,7 @@ function AdminDashboard() {
       <main
         id="content"
         role="main"
-        className="main pointer-event"
+        className="main pointer-event manage"
         style={{ backgroundColor: "#ffffff" }}
       >
         <div className="content container-fluid">
@@ -120,7 +120,7 @@ function AdminDashboard() {
               <div className="row gx-2 gx-lg-3" id="order_stats">
                 <div className="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                   <Link
-                    className="card card-hover-shadow h-100"
+                    className="card Admincards card-hover-shadow h-100"
                     to=""
                     // to="/admin/orders/list/pending"
                     style={{ background: "#FFFFFF" }}
@@ -135,7 +135,7 @@ function AdminDashboard() {
                             Pending
                           </h6>
                           <span
-                            className="card-title h2"
+                            className="card-title h2 "
                             style={{ color: "#F14A16!important" }}
                           >
                             {mainState?.resAdminDashboard
@@ -154,7 +154,7 @@ function AdminDashboard() {
                 </div>
                 <div className="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                   <Link
-                    className="card card-hover-shadow h-100"
+                    className="card Admincards card-hover-shadow h-100"
                     to=""
                     // to="/admin/orders/list/confirmed"
                     style={{ background: "#FFFFFF" }}
@@ -188,7 +188,7 @@ function AdminDashboard() {
                 </div>
                 <div className="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                   <Link
-                    className="card card-hover-shadow h-100"
+                    className="card Admincards card-hover-shadow h-100"
                     to=""
                     // to="/admin/orders/list/processing"
                     style={{ background: "#FFFFFF" }}
@@ -222,7 +222,7 @@ function AdminDashboard() {
                 </div>
                 <div className="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                   <Link
-                    className="card card-hover-shadow h-100"
+                    className="card Admincards card-hover-shadow h-100"
                     to=""
                     // to="/admin/orders/list/out_for_delivery"
                     style={{ background: "#FFFFFFff" }}
@@ -391,7 +391,7 @@ function AdminDashboard() {
                     className="card card-body card-hover-shadow h-100 text-color-1 text-center"
                     style={{ backgroundColor: "#EEEEEE" }}
                   >
-                    <h1 className="p-2 text-color-1">1,937.24₹</h1>
+                    <h1 className="p-2 text-color-1">0₹</h1>
                     <div className="text-uppercase">Commission earned</div>
                   </div>
                 </div>
@@ -400,7 +400,7 @@ function AdminDashboard() {
                     className="card card-body card-hover-shadow h-100 text-color-1 text-center"
                     style={{ backgroundColor: "#EEEEEE" }}
                   >
-                    <h1 className="p-2 text-color-1">723.00₹</h1>
+                    <h1 className="p-2 text-color-1">0₹</h1>
                     <div className="text-uppercase">Delivery charge earned</div>
                   </div>
                 </div>
@@ -409,7 +409,7 @@ function AdminDashboard() {
                     className="card card-body card-hover-shadow h-100 text-color-1 text-center"
                     style={{ backgroundColor: "#EEEEEE" }}
                   >
-                    <h1 className="p-2 text-color-1">978.50₹</h1>
+                    <h1 className="p-2 text-color-1">0₹</h1>
                     <div className="text-uppercase">Pending amount</div>
                   </div>
                 </div>
@@ -418,7 +418,7 @@ function AdminDashboard() {
                     className="card card-body card-hover-shadow h-100 text-color-1 text-center"
                     style={{ backgroundColor: "#EEEEEE" }}
                   >
-                    <h1 className="p-2 text-color-1">114.00₹</h1>
+                    <h1 className="p-2 text-color-1">0₹</h1>
                     <div className="text-uppercase">In-house earning</div>
                   </div>
                 </div>
@@ -427,7 +427,7 @@ function AdminDashboard() {
                     className="card card-body card-hover-shadow h-100 text-color-1 text-center"
                     style={{ backgroundColor: "#EEEEEE" }}
                   >
-                    <h1 className="p-2 text-color-1">0.00₹</h1>
+                    <h1 className="p-2 text-color-1">0₹</h1>
                     <div className="text-uppercase">Total tax collected</div>
                   </div>
                 </div>

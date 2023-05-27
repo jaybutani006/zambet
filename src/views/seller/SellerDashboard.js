@@ -55,7 +55,7 @@ function SellerDashboard() {
               <div className="row gx-2 gx-lg-3" id="order_stats">
                 <div className="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                   <a
-                    className="card card-hover-shadow h-100"
+                    className="card Admincards card-hover-shadow h-100"
                     href="/seller/orders/list/pending"
                     style={{ background: "#FFFFFF" }}
                   >
@@ -87,7 +87,7 @@ function SellerDashboard() {
                 </div>
                 <div className="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                   <a
-                    className="card card-hover-shadow h-100"
+                    className="card Admincards card-hover-shadow h-100"
                     href="/seller/orders/list/confirmed"
                     style={{ background: "#FFFFFF" }}
                   >
@@ -119,7 +119,7 @@ function SellerDashboard() {
                 </div>
                 <div className="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                   <a
-                    className="card card-hover-shadow h-100"
+                    className="card Admincards card-hover-shadow h-100"
                     href="/seller/orders/list/processing"
                     style={{ background: "#FFFFFF" }}
                   >
@@ -151,7 +151,7 @@ function SellerDashboard() {
                 </div>
                 <div className="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                   <a
-                    className="card card-hover-shadow h-100"
+                    className="card Admincards card-hover-shadow h-100"
                     href="/seller/orders/list/out_for_delivery"
                     style={{ background: "#FFFFFF" }}
                   >

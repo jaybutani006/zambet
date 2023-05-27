@@ -153,8 +153,8 @@ function SellerOrdersDetails() {
     if (
       window.confirm(
         "Are you sure you want to change the order status to : " +
-        orderStatus +
-        " ?"
+          orderStatus +
+          " ?"
       )
     ) {
       const config = {
@@ -182,7 +182,7 @@ function SellerOrdersDetails() {
           // navigate("/seller/dashboard", { replace: true });
         })
         .catch((error) => {
-          defaultAPIErrorHandler(error)
+          defaultAPIErrorHandler(error);
         });
     }
   };
@@ -236,7 +236,7 @@ function SellerOrdersDetails() {
         alert("Successfully assigned delivery man to order.");
       })
       .catch((error) => {
-        defaultAPIErrorHandler(error)
+        defaultAPIErrorHandler(error);
         // alert("Failed to assign delivery man. Try again!");
       });
   };
@@ -450,8 +450,8 @@ function SellerOrdersDetails() {
                             placeholder="Enter New Password"
                             name="newPassword"
                             className="form-control"
-                          // onChange={handleInputChange}
-                          // value={userDetails.newPassword}
+                            // onChange={handleInputChange}
+                            // value={userDetails.newPassword}
                           />
                         </div>
                       </div>
@@ -470,8 +470,8 @@ function SellerOrdersDetails() {
                             placeholder="Enter Confirm Password"
                             name="confirmNewPassword"
                             className="form-control"
-                          // onChange={handleInputChange}
-                          // value={userDetails.confirmNewPassword}
+                            // onChange={handleInputChange}
+                            // value={userDetails.confirmNewPassword}
                           />
                         </div>
                       </div>
@@ -567,8 +567,8 @@ function SellerOrdersDetails() {
                 </Link>
                 <button
                   className="btn btn-xs btn-secondary"
-                // data-toggle="modal"
-                // data-target="#locationModal"
+                  // data-toggle="modal"
+                  // data-target="#locationModal"
                 >
                   <i className="tio-map" /> Show locations on map
                 </button>
@@ -613,7 +613,7 @@ function SellerOrdersDetails() {
                             selected={
                               itemX.value === selectedOrderStatus ||
                               itemX.value ===
-                              orderDetails?.OrderDetails?.[0]?.order_status
+                                orderDetails?.OrderDetails?.[0]?.order_status
                             }
                           >
                             {itemX.name}
@@ -671,8 +671,9 @@ function SellerOrdersDetails() {
                     <div className="flex-end">
                       <h6 style={{ color: "#8a8a8a" }}>Payment Reference :</h6>
                       <h6 className="mx-1" style={{ color: "#8a8a8a" }}>
-                        {`${orderDetails?.payment_status || "pay K3pkdGVqAmWcH5"
-                          }`}
+                        {`${
+                          orderDetails?.payment_status || "pay K3pkdGVqAmWcH5"
+                        }`}
                       </h6>
                     </div>
                   </div>
@@ -709,52 +710,52 @@ function SellerOrdersDetails() {
 
                 {!!orderDetails && !!orderDetails?.OrderDetails?.length
                   ? orderDetails?.OrderDetails.map((item, index) => (
-                    <div className="media">
-                      <div className="avatar avatar-xl mr-3">
-                        <img
-                          className="img-fluid"
-                          src={item?.pphoto || productImage}
-                          onError={({ currentTarget }) => {
-                            currentTarget.onerror = null; // prevents looping
-                            currentTarget.src = productImage;
-                          }} 
-                          alt="Image Description"
-                        />
-                      </div>
-                      <div className="media-body">
-                        <div className="row">
-                          <div className="col-md-4 mb-3 mb-md-0 product-name">
-                            <p>{item.pname || "...."}</p>
-                            <strong>
-                              <u>Brand Name : </u>
-                            </strong>
-                            <div className="font-size-sm text-body">
-                              <span className="font-weight-bold">
-                                {item?.brand_name || "...."}
-                              </span>
+                      <div className="media">
+                        <div className="avatar avatar-xl mr-3">
+                          <img
+                            className="img-fluid"
+                            src={item?.pphoto || productImage}
+                            onError={({ currentTarget }) => {
+                              currentTarget.onerror = null; // prevents looping
+                              currentTarget.src = productImage;
+                            }}
+                            alt="Image Description"
+                          />
+                        </div>
+                        <div className="media-body">
+                          <div className="row">
+                            <div className="col-md-4 mb-3 mb-md-0 product-name">
+                              <p>{item.pname || "...."}</p>
+                              <strong>
+                                <u>Brand Name : </u>
+                              </strong>
+                              <div className="font-size-sm text-body">
+                                <span className="font-weight-bold">
+                                  {item?.brand_name || "...."}
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                          <div className="col col-md-2 align-self-center p-0 ">
-                            <h6>{`\u20B9${item.pprice || "..."} `}</h6>
-                          </div>
-                          <div className="col col-md-1 align-self-center">
-                            <h5>{item.qty || "...."}</h5>
-                          </div>
-                          <div className="col col-md-1 align-self-center  p-0 product-name">
-                            <h5>{`\u20B9${"0" || "..."}`}</h5>
-                          </div>
-                          <div className="col col-md-2 align-self-center  p-0 product-name">
-                            <h5>{`\u20B9${"0" || "..."}`}</h5>
-                          </div>
-                          <div className="col col-md-2 align-self-center text-right  ">
-                            <h5 style={{ fontSize: "12px" }}>
-                              {`\u20B9${item.pprice * item.qty || "...."}`}
-                            </h5>
+                            <div className="col col-md-2 align-self-center p-0 ">
+                              <h6>{`\u20B9${item.pprice || "..."} `}</h6>
+                            </div>
+                            <div className="col col-md-1 align-self-center">
+                              <h5>{item.qty || "...."}</h5>
+                            </div>
+                            <div className="col col-md-1 align-self-center  p-0 product-name">
+                              <h5>{`\u20B9${"0" || "..."}`}</h5>
+                            </div>
+                            <div className="col col-md-2 align-self-center  p-0 product-name">
+                              <h5>{`\u20B9${"0" || "..."}`}</h5>
+                            </div>
+                            <div className="col col-md-2 align-self-center text-right  ">
+                              <h5 style={{ fontSize: "12px" }}>
+                                {`\u20B9${item.pprice * item.qty || "...."}`}
+                              </h5>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))
+                    ))
                   : null}
 
                 <hr />
@@ -827,9 +828,9 @@ function SellerOrdersDetails() {
                       onChange={(e) => {
                         setSelectedDeliveryBoyPhone(
                           resDeliveryBoys?.length &&
-                          resDeliveryBoys.filter(
-                            (item) => item.user_id == e.target.value
-                          )?.[0]?.users_data?.[0]?.contect_no
+                            resDeliveryBoys.filter(
+                              (item) => item.user_id == e.target.value
+                            )?.[0]?.users_data?.[0]?.contect_no
                         );
                         handleAssignDeliveryMan(e);
                       }}
@@ -844,8 +845,8 @@ function SellerOrdersDetails() {
                             value={item.user_id}
                             selected={
                               item.user_id ===
-                              orderDetails?.OrderDetails?.[0]
-                                ?.deliveryboy?.[0]?._id ||
+                                orderDetails?.OrderDetails?.[0]
+                                  ?.deliveryboy?.[0]?._id ||
                               item.user_id == selectedDeliveryBoyId
                             }
                           >{`${item.fullname} (+91-${item.users_data?.[0]?.contect_no} )`}</option>
@@ -902,9 +903,7 @@ function SellerOrdersDetails() {
                   >
                     <span>Delivery service name :</span>
                     <span style={{ float: "right" }}>
-                      <Link
-                        to=""
-                      >
+                      <Link to="">
                         <i className="tio-edit" />
                       </Link>
                     </span>

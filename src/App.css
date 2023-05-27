@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.main {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.Admincards:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.AdminHeader {
+  position: absolute;
+  top: 0px;
+}

@@ -28,7 +28,7 @@ const ReplacePolicy = () => {
       <main
         id="content"
         role="main"
-        className="main pointer-event"
+        className="pointer-event"
         style={{ backgroundColor: "#F7F8FA" }}
       >
         <div className="content container-fluid">
