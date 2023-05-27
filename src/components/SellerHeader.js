@@ -986,6 +986,17 @@ function SellerHeader({ toggleSideBar, isOpen }) {
                     </span>
                   </Link>
                 </li>
+                <li className="navbar-vertical-aside-has-menu ">
+                  <Link
+                    className="js-navbar-vertical-aside-menu-link nav-link"
+                    to="/seller/seller-refund-list"
+                  >
+                    <i className="tio-filter-list nav-icon" />
+                    <span className="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
+                      RefundDetails
+                    </span>
+                  </Link>
+                </li>
                 <li className="nav-item">
                   <small className="nav-subtitle">Manage Staff</small>
                   <small className="tio-more-horizontal nav-subtitle-replacer" />

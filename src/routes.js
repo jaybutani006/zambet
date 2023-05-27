@@ -210,6 +210,7 @@ import AdminReplacePolicy from "views/admin/AdminReplacePolicy";
 import ManageAdvertisement from "views/admin/ManageAdvertisement";
 import AllAds from "views/customer/AllAds";
 import ViewAllDetails from "views/customerNew/ViewAllDetails";
+import SellerRefundList from "views/seller/SellerRefundList";
 //
 
 const customerRoutes = [
@@ -1293,6 +1294,7 @@ const sellerRoutes = [
     element: SellerProductReturnList,
     index: true,
   },
+ 
   {
     path: "purchase-order/expity-order",
     name: "seller",
@@ -1309,6 +1311,12 @@ const sellerRoutes = [
     path: "seller-advertisement",
     name: "",
     element: SellerAdvertisement,
+    index: true,
+  },
+  {
+    path: "refunddetails",
+    name: "",
+    element: RefundDetails,
     index: true,
   },
   // seller routes
@@ -1440,6 +1448,12 @@ const sellerRoutes = [
     name: "",
     element: SellerMyShop,
     index: false,
+  },
+  {
+    path: "/seller-refund-list",
+    name: "seller",
+    element: SellerRefundList,
+    index: true,
   },
   {
     path: "/shop/edit/1",

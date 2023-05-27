@@ -128,7 +128,7 @@ function SellerRefundRequestList() {
         getRefundRequestListAPI();
       })
       .catch((error) => {
-        defaultAPIErrorHandler(error)
+        defaultAPIErrorHandler(error);
       });
   };
   const updateRefundStatus = (productreturnId, payment_refund_status) => {
@@ -152,7 +152,7 @@ function SellerRefundRequestList() {
         getRefundRequestListAPI();
       })
       .catch((error) => {
-        defaultAPIErrorHandler(error)
+        defaultAPIErrorHandler(error);
       });
   };
 

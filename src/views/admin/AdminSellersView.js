@@ -628,6 +628,15 @@ function AdminSellersView() {
                             <h5>Phone : {mainState?.contect_no || "...."}</h5>
                           </div>
                         </div>
+                        <div className="flex-start">
+                          <div>
+                            <h5>
+                              Vendor Type :{" "}
+                              {mainState?.vendor_details?.[0]?.vendor_type ||
+                                "...."}
+                            </h5>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     {/* </div> */}

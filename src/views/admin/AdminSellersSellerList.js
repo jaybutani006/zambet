@@ -146,7 +146,7 @@ function AdminSellersSellerList() {
         link.parentNode.removeChild(link);
       })
       .catch((error) => {
-        defaultAPIErrorHandler(error)
+        defaultAPIErrorHandler(error);
       });
   };
 
@@ -403,6 +403,7 @@ function AdminSellersSellerList() {
                         </th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Vendor Type</th>
                         <th scope="col">Status</th>
                         <th scope="col">Orders</th>
                         <th scope="col">Products</th>
@@ -437,6 +438,9 @@ function AdminSellersSellerList() {
                             >{`${item?.vendor_details?.[0]?.first_name} ${item?.vendor_details?.[0]?.last_name}`}</td>
                             <td scope="col">{item?.contect_no || "..."}</td>
                             <td scope="col">{item?.email_address || "..."}</td>
+                            <td scope="col">
+                              {item?.vendor_details?.[0]?.vendor_type}
+                            </td>
                             <td scope="col">
                               <label
                                 // className="badge badge-danger"
