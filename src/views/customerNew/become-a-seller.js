@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate, Link } from "react-router-dom";
+import Form from "react-bootstrap/Form";
 // firebase
 import { authentication } from "firebase-config";
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
@@ -31,6 +32,7 @@ function BecomeASeller() {
     banner: "",
     //
     otp: "",
+    vendor_type: "",
   };
   const [userDetails, setUserDetails] = useState(initialState);
 
@@ -265,6 +267,8 @@ function BecomeASeller() {
     }
   };
 
+  console.log(userDetails);
+
   const handleApplyShop = () => {
     // e.preventDefault();
     console.log("handleapplyshop");
@@ -276,6 +280,7 @@ function BecomeASeller() {
       password: userDetails.password,
       company_name: userDetails.shop_name,
       company_address: userDetails.shop_address,
+      vendor_type: userDetails.vendor_type,
     });
     console.log(data);
 
@@ -286,12 +291,13 @@ function BecomeASeller() {
       headers: {
         "Content-Type": "application/json",
       },
+      // data: data,
       data: data,
     };
 
     axios(config)
       .then((response) => {
-        console.log(JSON.stringify(response.data));
+        console.log(response.data);
         // if (
         //   window.confirm(
         //     `You have registered successfully.\nPlease wait for approval from admin.\nOnce approved you will be able to login.\nClick OK to redirect to Login page.`
@@ -305,7 +311,7 @@ function BecomeASeller() {
         setUserDetails(initialState);
       })
       .catch((error) => {
-        defaultAPIErrorHandler(error)
+        defaultAPIErrorHandler(error);
       });
   };
 
@@ -2852,6 +2858,21 @@ function BecomeASeller() {
                           value={userDetails.shop_address}
                         />
                       </div>
+                    </div>
+                    <h5 className="black">Select Shop Type</h5>
+                    <div className="col-sm-6">
+                      <Form.Select
+                        aria-label="Default select example"
+                        className="col-sm-6"
+                        onChange={handleInputChange}
+                        name="vendor_type"
+                        value={userDetails.vendor_type}
+                      >
+                        <option selected>---select---</option>
+                        <option value="warehouse">warehouse</option>
+                        <option value="store">store</option>
+                        <option value="seller">seller</option>
+                      </Form.Select>
                     </div>
                     {/* <div className>
                       <div className="pb-1">

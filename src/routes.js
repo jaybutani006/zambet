@@ -1294,7 +1294,7 @@ const sellerRoutes = [
     element: SellerProductReturnList,
     index: true,
   },
- 
+
   {
     path: "purchase-order/expity-order",
     name: "seller",

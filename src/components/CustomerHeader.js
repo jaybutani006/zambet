@@ -2592,14 +2592,15 @@ function CustomerHeader() {
                 className="topbar-link"
                 href={`tel: ${process.env.REACT_APP_ZAMBET_PHONE || ""}`}
               >
-                <i className="fa fa-phone" />{" "}
-                {`+${process.env.REACT_APP_ZAMBET_PHONE || ""}`}
+                <i className="fa fa-phone" />
+                +1 99999 99999
+                {/* {`+${process.env.REACT_APP_ZAMBET_PHONE || ""}`} */}
               </a>
             </div>
             <div className="d-none d-md-block ml-2 text-nowrap">
               <a
                 className="topbar-link d-none d-md-inline-block"
-                href={`tel: ${process.env.REACT_APP_ZAMBET_PHONE || ""}`}
+                // href={`tel: ${process.env.REACT_APP_ZAMBET_PHONE || ""}`}
               >
                 <i className="fa fa-phone" /> +1 99999 99999
               </a>
