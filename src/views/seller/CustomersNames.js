@@ -26,13 +26,17 @@ const CustomersNames = () => {
 
   const renderCustomerData = () => {
     const uniqueIds = new Set();
+    let counter = 0;
 
     return name.map((ele) => {
       return ele.ordermasters.map((e) => {
         if (!uniqueIds.has(e.regid)) {
           uniqueIds.add(e.regid);
+          counter++;
+
           return (
             <tr key={e.regid} className="text-center">
+              <td>{counter}</td>
               <td>{e.regid}</td>
               <td>{e.customer_name}</td>
               <td>{e.customer_mobile}</td>
@@ -74,6 +78,7 @@ const CustomersNames = () => {
                     >
                       <thead className="thead-light">
                         <tr>
+                          <th style={{ width: "10%" }}>SL#</th>
                           <th style={{ width: "10%" }}>ID</th>
                           <th style={{ width: "40%" }}>Name</th>
                           <th style={{ width: "40%" }}>Contact Number</th>

@@ -533,7 +533,7 @@ function SellerHeader({ toggleSideBar, isOpen }) {
                     <Link
                       className="dropdown-item"
                       // to="javascript:"
-                      to="/seller/auth/logout"
+                      to="/seller/auth/login"
                       replace
                       onclick="Swal.fire({
                               title: 'Do you want to logout?',

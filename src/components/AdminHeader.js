@@ -479,7 +479,7 @@ function AdminHeader({ toggleSideBar, isOpen }) {
                     <div className="dropdown-divider" />
                     <Link
                       className="dropdown-item"
-                      to="/admin/auth/logout"
+                      to="/admin/auth/login"
                       replace
                       onclick="Swal.fire({
                               title: 'Do you want to logout?',
