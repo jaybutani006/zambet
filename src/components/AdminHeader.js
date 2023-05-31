@@ -542,7 +542,7 @@ function AdminHeader({ toggleSideBar, isOpen }) {
                 <i className="tio-clear tio-lg" onClick={toggleSideBar} />
               </button>
             </div>
-            <div className="navbar-vertical-content mt-2">
+            <div className="navbar-vertical-content mt-2 ">
               <ul className="navbar-nav navbar-nav-lg nav-tabs">
                 <li className="navbar-vertical-aside-has-menu ">
                   <Link
@@ -1079,7 +1079,16 @@ function AdminHeader({ toggleSideBar, isOpen }) {
                 <li className="nav-item ">
                   <Link className="nav-link " to="/admin/sellers/seller-list">
                     <span className="tio-users-switch nav-icon" />
-                    <span className="text-truncate">Sellers </span>
+                    <span className="text-truncate">Sellers</span>
+                  </Link>
+                </li>
+                <li className="nav-item ">
+                  <Link
+                    className="nav-link "
+                    to="/admin/sellers/areaWiseSeller/list"
+                  >
+                    <span className="tio-users-switch nav-icon" />
+                    <span className="text-truncate">Area Wise Sellers</span>
                   </Link>
                 </li>
                 <li className="nav-item ">
@@ -1607,7 +1616,7 @@ function AdminHeader({ toggleSideBar, isOpen }) {
                 <li className="nav-item ">
                   <Link className="nav-link " to="/admin/deal/list">
                     <span className="tio-filter-list nav-icon" />
-                    <span className="text-truncate">Deals </span>
+                    <span className="text-truncate">Deals</span>
                   </Link>
                 </li>
                 <li className="nav-item ">
@@ -1734,9 +1743,15 @@ function AdminHeader({ toggleSideBar, isOpen }) {
                   </Link>
                 </li>
                 <li className="nav-item ">
-                  <Link className="nav-link " to="/admin/manageadvertisement">
+                  <Link className="nav-link " to="/admin/margin-policy/list">
                     <span className="tio-filter-list nav-icon" />
                     <span className="text-truncate">Manage advertisement</span>
+                  </Link>
+                </li>
+                <li className="nav-item ">
+                  <Link className="nav-link " to="/admin/margin-policy/list">
+                    <span className="tio-filter-list nav-icon" />
+                    <span className="text-truncate">Margin Policy</span>
                   </Link>
                 </li>
 

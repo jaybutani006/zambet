@@ -788,6 +788,17 @@ function SellerHeader({ toggleSideBar, isOpen }) {
                     </li>
                   </ul>
                 </li>
+                <li>
+                  <Link
+                    className="js-navbar-vertical-aside-menu-link nav-link"
+                    to="/seller/customersnames"
+                  >
+                    <i className="tio-receipt-outlined nav-icon" />
+                    <span className="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
+                      Customer Name
+                    </span>
+                  </Link>
+                </li>
                 <li className="nav-item">
                   <small className="nav-subtitle">Purchase Order</small>
                   <small className="tio-more-horizontal nav-subtitle-replacer" />
@@ -1077,6 +1088,17 @@ function SellerHeader({ toggleSideBar, isOpen }) {
                     <i className="tio-filter-list nav-icon" />
                     <span className="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
                       Advertisement
+                    </span>
+                  </Link>
+                </li>
+                <li className="navbar-vertical-aside-has-menu ">
+                  <Link
+                    className="js-navbar-vertical-aside-menu-link nav-link"
+                    to="/seller/Margin-policy"
+                  >
+                    <i className="tio-filter-list nav-icon" />
+                    <span className="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
+                      margin policies
                     </span>
                   </Link>
                 </li>

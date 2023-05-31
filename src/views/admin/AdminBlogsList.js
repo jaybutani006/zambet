@@ -17,7 +17,7 @@ function AdminBlogsList() {
   const [resBlogList, setResBlogList] = useState([]);
   const [search, setSearch] = useState("");
 
-  const handleInputChange = (e) => { };
+  const handleInputChange = (e) => {};
 
   const handleDeleteBlog = (blogId, index) => {
     if (
@@ -45,7 +45,7 @@ function AdminBlogsList() {
           getBlogList();
         })
         .catch((error) => {
-          defaultAPIErrorHandler(error)
+          defaultAPIErrorHandler(error);
         });
     } else {
       console.log("Cancel");
@@ -173,8 +173,8 @@ function AdminBlogsList() {
                                 // color={"#ffffff"}
                                 // loading={!!camps}
                                 loading
-                              // cssOverride={override}
-                              // size={150}
+                                // cssOverride={override}
+                                // size={150}
                               />
                             </center>
                           </td>

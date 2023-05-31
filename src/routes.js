@@ -211,6 +211,11 @@ import ManageAdvertisement from "views/admin/ManageAdvertisement";
 import AllAds from "views/customer/AllAds";
 import ViewAllDetails from "views/customerNew/ViewAllDetails";
 import SellerRefundList from "views/seller/SellerRefundList";
+import AdminMarginPolicyList from "views/admin/AdminMarginPolicyList";
+import AdminMarginPolicyEdit from "views/admin/AdminMarginPolicyEdit";
+import SellerMarginPolicy from "views/seller/SellerMarginPolicy";
+import AdminAreaWiseSeller from "views/admin/AdminAreaWiseSeller";
+import CustomersNames from "views/seller/CustomersNames";
 //
 
 const customerRoutes = [
@@ -862,6 +867,12 @@ const adminRoutes = [
     index: false,
   },
   {
+    path: "/sellers/areaWiseSeller/list",
+    name: "sub-sub-category/view",
+    element: AdminAreaWiseSeller,
+    index: false,
+  },
+  {
     path: "/customer/list",
     name: "sub-sub-category/view",
     element: AdminCustomerList,
@@ -1137,6 +1148,18 @@ const adminRoutes = [
     element: ManageAdvertisement,
     index: true,
   },
+  {
+    path: "/margin-policy/list",
+    name: "",
+    element: AdminMarginPolicyList,
+    index: true,
+  },
+  {
+    path: "/margin-policy/edit/:id",
+    name: "",
+    element: AdminMarginPolicyEdit,
+    index: true,
+  },
 ];
 
 const sellerRoutes = [
@@ -1311,6 +1334,18 @@ const sellerRoutes = [
     path: "seller-advertisement",
     name: "",
     element: SellerAdvertisement,
+    index: true,
+  },
+  {
+    path: "customersnames",
+    name: "",
+    element: CustomersNames,
+    index: true,
+  },
+  {
+    path: "Margin-policy",
+    name: "",
+    element: SellerMarginPolicy,
     index: true,
   },
   {
