@@ -30,7 +30,7 @@ const AdminAreaWiseSeller = () => {
 
   const filteredSellers = seller.filter((ele) => {
     const vendorDetails = ele.vendor_details[0].city || "...";
-    return vendorDetails.toLowerCase().includes(searchQuery.toLowerCase());
+    return vendorDetails.toLowerCase().includes(searchQuery.toLowerCase());     
   });
 
   return (
@@ -102,7 +102,13 @@ const AdminAreaWiseSeller = () => {
                         ) : (
                           <tr>
                             <td colSpan="3" className="text-center">
-                              No matching sellers found.
+                              <img
+                                className="mb-3"
+                                src="/assets/back-end/svg/illustrations/sorry.svg"
+                                alt="Image Description"
+                                style={{ width: "7rem" }}
+                              />
+                              <p className="mb-0">No data to show</p>
                             </td>
                           </tr>
                         )}
@@ -110,18 +116,6 @@ const AdminAreaWiseSeller = () => {
                     </table>
                   </div>
                 </div>
-                <div className="card-footer"></div>
-                {!seller?.length && (
-                  <div className="text-center p-4">
-                    <img
-                      className="mb-3"
-                      src="/assets/back-end/svg/illustrations/sorry.svg"
-                      alt="Image Description"
-                      style={{ width: "7rem" }}
-                    />
-                    <p className="mb-0">No data to show</p>
-                  </div>
-                )}
               </div>
             </div>
           </div>

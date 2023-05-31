@@ -2,16 +2,13 @@
 import { fetchToken, onMessageListener } from "config/firebase";
 // NOTE: don't import css like below, it will impact whole project instead if you want to apply css to only specific react component then you should not use style.css file instead style.module.css or import style from "style.css"
 // import "bootstrap/dist/css/bootstrap.min.css";
-//
 import axios from "axios";
 import { Context } from "context/newContext";
 import React, { useContext, useEffect, useState } from "react";
 import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
-//
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { defaultAPIErrorHandler } from "api/api";
-//
 
 function AdminHeader({ toggleSideBar, isOpen }) {
   const location = useLocation();
@@ -512,7 +509,10 @@ function AdminHeader({ toggleSideBar, isOpen }) {
         </div>
       </header>
       <aside
-        style={{ background: "#ffffff!important", textAlign: "left" }}
+        style={{
+          background: "#ffffff!important",
+          textAlign: "left",
+        }}
         className="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered default navbar-vertical-aside-initialized"
       >
         <div className="navbar-vertical-container">
@@ -1743,7 +1743,7 @@ function AdminHeader({ toggleSideBar, isOpen }) {
                   </Link>
                 </li>
                 <li className="nav-item ">
-                  <Link className="nav-link " to="/admin/margin-policy/list">
+                  <Link className="nav-link " to="/admin/manageadvertisement">
                     <span className="tio-filter-list nav-icon" />
                     <span className="text-truncate">Manage advertisement</span>
                   </Link>

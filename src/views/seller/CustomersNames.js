@@ -23,6 +23,27 @@ const CustomersNames = () => {
   useEffect(() => {
     CustomerName();
   }, []);
+
+  const renderCustomerData = () => {
+    const uniqueIds = new Set();
+
+    return name.map((ele) => {
+      return ele.ordermasters.map((e) => {
+        if (!uniqueIds.has(e.regid)) {
+          uniqueIds.add(e.regid);
+          return (
+            <tr key={e.regid} className="text-center">
+              <td>{e.regid}</td>
+              <td>{e.customer_name}</td>
+              <td>{e.customer_mobile}</td>
+            </tr>
+          );
+        }
+        return null;
+      });
+    });
+  };
+
   return (
     <>
       <main
@@ -40,11 +61,6 @@ const CustomersNames = () => {
                     <div className="col-12 mb-1 col-md-4">
                       <h5>Sellers</h5>
                     </div>
-                    <div className="col-12 mb-1 col-md-3">
-                      {/* <Link to={"/admin/blogs/add"} className="btn btn-primary">
-                        Add Blog
-                      </Link> */}
-                    </div>
                   </div>
                 </div>
                 <div className="card-body" style={{ padding: 0 }}>
@@ -54,51 +70,21 @@ const CustomersNames = () => {
                   >
                     <table
                       id="datatable"
-                      // style={{
-                      //   textAlign: "center",
-                      //   tableLayout: "fixed",
-                      //   display: "block",
-                      //   height: "50vh",
-                      //   overflowY: "scroll",
-                      // }}
-                      className="table table-hover table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
+                      className="table text-center table-hover table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
                     >
                       <thead className="thead-light">
-                        <tr className="text-center">
-                          <th style={{ width: "10%" }}>SL#</th>
+                        <tr>
+                          <th style={{ width: "10%" }}>ID</th>
                           <th style={{ width: "40%" }}>Name</th>
                           <th style={{ width: "40%" }}>Contact Number</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        {/* <tr className="text-center">
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr> */}
-                        {name.map((ele, i) => {
-                          return (
-                            <>
-                              <tr className="text-center">
-                                <td>{i + 1}</td>
-                                {ele.ordermasters.map((e) => {
-                                  return (
-                                    <>
-                                      <td>{e.customer_name}</td>
-                                      <td>{e.customer_mobile}</td>
-                                    </>
-                                  );
-                                })}
-                              </tr>
-                            </>
-                          );
-                        })}
-                      </tbody>
+                      <tbody>{renderCustomerData()}</tbody>
                     </table>
                   </div>
                 </div>
                 <div className="card-footer"></div>
-                {/* {!blogList?.length && (
+                {!name?.length && (
                   <div className="text-center p-4">
                     <img
                       className="mb-3"
@@ -108,7 +94,7 @@ const CustomersNames = () => {
                     />
                     <p className="mb-0">No data to show</p>
                   </div>
-                )} */}
+                )}
               </div>
             </div>
           </div>
