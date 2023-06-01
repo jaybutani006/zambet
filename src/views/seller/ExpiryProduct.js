@@ -50,51 +50,7 @@ const ExpiryProduct = () => {
                         <div className="col-12 col-sm-6 col-md-4">
                           <h5>Expiry Product</h5>
                         </div>
-                        <div className="col-12 col-sm-6 col-md-4">
-                          <form>
-                            <div className="input-group input-group-merge input-group-flush">
-                              <div className="input-group-prepend">
-                                <div className="input-group-text">
-                                  <i className="tio-search" />
-                                </div>
-                              </div>
-                              <input
-                                id="datatableSearch_"
-                                type="search"
-                                name="search"
-                                className="form-control"
-                                placeholder="Search"
-                                aria-label="Search orders"
-                                onChange={(e) => {
-                                  setSearch(e.target.value);
-                                  // FIXME : cant search with number types and nested arrays
-                                  setExpiryList(
-                                    searchFor(e.target.value, expiryList)
-                                  );
-                                }}
-                                value={search}
-                              />
-                              <button
-                                onClick={(e) => e.preventDefault()}
-                                className="btn btn-primary"
-                              >
-                                Search
-                              </button>
-                            </div>
-                          </form>
-                        </div>
                       </div>
-                    </div>
-                    <div className="col-12 col-sm-2 mt-2 mt-sm-0 p-3">
-                      <button
-                        // onClick={(e) => {
-                        //   e.preventDefault();
-                        //   handleExport();
-                        // }}
-                        className="btn btn-success float-right float-sm-none"
-                      >
-                        Export
-                      </button>
                     </div>
                     <div className="card-body" style={{ padding: 0 }}>
                       <div
@@ -104,7 +60,7 @@ const ExpiryProduct = () => {
                         <table
                           id="datatable"
                           style={{ textAlign: "left" }}
-                          className="table table-hover table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
+                          className="table text-center table-hover table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
                         >
                           <thead className="thead-light">
                             <tr>
