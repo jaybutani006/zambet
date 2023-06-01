@@ -1,6 +1,6 @@
 import AdminHeader from "./AdminHeader";
-import AdminFooter from "./AdminFooter";
 import AdminContent from "./AdminContent";
+import AdminFooter from "./AdminFooter";
 import CustomerHeader from "./CustomerHeader";
 import CustomerFooter from "./CustomerFooter";
 import CustomerContent from "./CustomerContent";

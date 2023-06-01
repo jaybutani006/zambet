@@ -1,15 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function AdminFooter() {
   return (
     <>
-      <div className="footer">
-        <div className="row justify-content-between align-items-center">
-          <div className="col mt-3">
+      {/* <div className="footer">
+        <div>
+          <div className="col">
             <span>Copyright © Zambet 2022</span>
           </div>
-        </div>
+        </div> */}
         {/* <div className="row justify-content-between align-items-center">
           <div className="col">
             <p className="font-size-sm mb-0">
@@ -53,7 +52,7 @@ function AdminFooter() {
             </div>
           </div>
         </div> */}
-      </div>
+      {/* </div> */}
     </>
   );
 }

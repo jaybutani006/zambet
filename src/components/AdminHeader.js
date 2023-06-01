@@ -191,7 +191,7 @@ function AdminHeader({ toggleSideBar, isOpen }) {
       /> */}
       <header
         id="header"
-        style={{ backgroundColor: "rgba(59, 113, 222, 1)" }}
+        style={{ backgroundColor: "rgba(59, 113, 222, 1)", position: "fixed" }}
         className="navbar AdminHeader navbar-expand-sm navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered"
       >
         <div className="navbar-nav-wrap">
@@ -512,6 +512,8 @@ function AdminHeader({ toggleSideBar, isOpen }) {
         style={{
           background: "#ffffff!important",
           textAlign: "left",
+          height: "100vh",
+          position: "fixed",
         }}
         className="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered default navbar-vertical-aside-initialized"
       >
@@ -527,7 +529,7 @@ function AdminHeader({ toggleSideBar, isOpen }) {
                 }}
               >
                 <img
-                  style={{ maxHeight: "38px" }}
+                  style={{ maxHeight: "42px" }}
                   onerror="this.src='/public/assets/back-end/img/900x400/img1.jpg'"
                   className="navbar-brand-logo-mini for-web-logo"
                   src="/zambet_logo.png"
@@ -542,7 +544,7 @@ function AdminHeader({ toggleSideBar, isOpen }) {
                 <i className="tio-clear tio-lg" onClick={toggleSideBar} />
               </button>
             </div>
-            <div className="navbar-vertical-content mt-2 ">
+            <div className="navbar-vertical-content mt-2">
               <ul className="navbar-nav navbar-nav-lg nav-tabs">
                 <li className="navbar-vertical-aside-has-menu ">
                   <Link

@@ -247,7 +247,7 @@ function SellerHeader({ toggleSideBar, isOpen }) {
 
       <header
         id="header"
-        style={{ backgroundColor: "rgba(59, 113, 222, 1)" }}
+        style={{ backgroundColor: "rgba(59, 113, 222, 1)", position: "fixed" }}
         className="navbar AdminHeader navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered"
       >
         {/* <ToastContainer position="top-center">
@@ -564,7 +564,12 @@ function SellerHeader({ toggleSideBar, isOpen }) {
       </header>
 
       <aside
-        style={{ background: "#ffffff", textAlign: "left" }}
+        style={{
+          background: "#ffffff",
+          textAlign: "left",
+          height: "100vh",
+          position: "fixed",
+        }}
         className="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered default navbar-vertical-aside-initialized"
       >
         <div className="navbar-vertical-container">
