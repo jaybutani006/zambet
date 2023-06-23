@@ -1,0 +1,20 @@
+@media (max-width: 1000px) {
+    .newClass {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .newClass2 {
+        flex-direction: column;
+    }
+}
+
+.newClass {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.newClass2 {
+    display: flex;
+}
